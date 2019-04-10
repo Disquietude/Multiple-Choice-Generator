@@ -1,11 +1,15 @@
 {
-  "name": "assessment-2",
+  "name": "multiple-choice-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immer": "^2.1.5",
+    "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-redux": "^7.0.1",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
