@@ -81,6 +81,7 @@ class QuestionForm extends Component {
             <button className='button button--add' type='submit'>Add Option</button>
             <button 
               className='button button--delete' 
+              type='button'
               onClick={(e) => this.props.deleteQuestion(this.props.index)}
             >
               Delete Question
