@@ -3,10 +3,10 @@ import {
   EDIT_DESCRIPTION,
   ADD_QUESTION,
   EDIT_QUESTION_LABEL,
-  EDIT_QUESTION_DESCRIPTION
-  // DELETE_QUESTION,
-  // ADD_OPTION,
-  // DELETE_OPTION
+  EDIT_QUESTION_DESCRIPTION,
+  DELETE_QUESTION,
+  ADD_OPTION,
+  DELETE_OPTION
 } from '../actions/types';
 import produce from 'immer';
 
@@ -37,6 +37,15 @@ export default (state = initialState, action) =>
         break;
       case EDIT_QUESTION_DESCRIPTION:
         draft.questions[action.index].description = action.input;
+        break;
+      case DELETE_QUESTION:
+        draft.questions.splice(action.index, 1);
+        break;
+      case ADD_OPTION:
+        draft.questions[action.index].options.push(action.input);
+        break;
+      case DELETE_OPTION:
+        draft.questions[action.questionIndex].options.splice(action.optionIndex, 1);
         break;
       default:
         return state;

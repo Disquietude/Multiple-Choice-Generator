@@ -17,8 +17,8 @@ const Display = (props) => {
 
   return (
     <div className='display'>
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
+      <h1 className='display__title'>{props.title}</h1>
+      <p className='display__description'>{props.description}</p>
       {questions}
     </div>
   )
