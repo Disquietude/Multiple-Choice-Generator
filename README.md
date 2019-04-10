@@ -1,9 +1,9 @@
-# Hatchways Assessment
+# Multiple Choice Generator
 
 ## Installation
 
 ```
-cd hatchways-assessment
+cd multiple-choice-generator
 npm install
 ```
 

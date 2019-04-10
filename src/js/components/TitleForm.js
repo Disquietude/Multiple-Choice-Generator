@@ -8,11 +8,13 @@ const TitleForm = (props) => (
     <input
       className='form-box__input'
       type='text'
+      placeholder='Title'
       value={props.title}
       onChange={(e) => props.editTitle(e.target.value)}
     />
     <textarea
       className='form-box__input' 
+      placeholder='Form Description'
       value={props.description}
       rows='5'
       onChange={(e) => props.editDescription(e.target.value)}
@@ -20,12 +22,12 @@ const TitleForm = (props) => (
   </div>
 );
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   title: state.title,
   description: state.description
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   editTitle: (input) => dispatch(editTitle(input)),
   editDescription: (input) => dispatch(editDescription(input))
 });
